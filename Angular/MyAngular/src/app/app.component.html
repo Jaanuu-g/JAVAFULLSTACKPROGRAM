@@ -1,0 +1,26 @@
+<h1>Angular Structural Directive</h1>
+<button (click)="changeFlag">show / hide div</button>
+<br>
+<div *ngIf="flag">
+  <h1>Developer</h1>
+  </div>
+  <div>
+  <ul>
+    <li *ngFor="let arrr of arr" (chick)="chicked(arrr)">
+      {{ arrr }}
+    </li>
+    <br />
+    {{
+      selectedVal
+    }}
+  </ul>
+  <br>
+  <b>
+    you have selected : {{selectedvechicale}}</b>
+  </b>
+  <br>
+  <div [ngSwitch]="selectedvechicale">
+    <font color="green" *ngSwitchCase="'Towwheeler'">Bike</font>
+    
+  </div>
+</div>
