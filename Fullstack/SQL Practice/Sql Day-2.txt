@@ -1,0 +1,312 @@
+CREATE TABLE tbl_employee (
+    eid NUMBER(5),
+    ename VARCHAR2(20),
+    esalary NUMBER(5)
+);
+DROP TABLE tbl_employee;
+CREATE TABLE tbl_employee (
+    eid NUMBER(5),
+    ename VARCHAR2(20),
+    esalary NUMBER(5)
+);
+
+
+INSERT INTO tbl_employee (eid, ename, esalary)
+VALUES (1, 'Gokul', 50000);
+
+INSERT INTO tbl_employee (eid, ename, esalary)
+VALUES (2, 'Janani', 80000);
+
+INSERT INTO tbl_employee (eid, ename, esalary)
+VALUES (3, 'Krish Gokul', 60000);
+SELECT * FROM tbl_employee;
+SELECT * FROM tbl_employee
+WHERE esalary BETWEEN 5000 AND 8000;
+SELECT * FROM tbl_employee
+WHERE esalary not BETWEEN 5000 AND 8000;
+SELECT * FROM tbl_employee;
+SELECT * FROM tbl_employee
+WHERE esalary >= 5000 AND  eid in (1 , 2 );
+SELECT * FROM tbl_employee
+WHERE esalary >= 5000 or  eid in (1 , 2 );  
+SELECT * FROM tbl_employee;
+select * From tbl_employee where ename like 'G%';
+select * From tbl_employee where ename like '_J%';
+select * From tbl_employee where ename like '_K%';
+select * From tbl_employee where ename not  like 'G%';
+select * From tbl_employee where ename  not like '_J%';
+select * From tbl_employee where ename like '_K%';
+select * From tbl_employee where ename like '%G%';
+select * From tbl_employee where ename like '%J%';
+insert into tbl_employee (eid , esalary) values (7,15000);
+SELECT * FROM tbl_employee;
+select * From tbl_employee where ename is null;
+select * From tbl_employee where ename is not  null;
+SELECT * FROM tbl_employee;
+select * from tbl_employee order by eid;
+select * from tbl_employee order by eid desc;
+select * from tbl_employee order by eid,ename;
+select * from tbl_employee order by eid,ename desc;
+alter table tbl_employee add doj date;
+SELECT * FROM tbl_employee;
+update tbl_employee set doj='10-May-2004' where eid=1;
+SELECT * FROM tbl_employee;
+update tbl_employee set doj='01-April-2000' where eid=2;
+SELECT * FROM tbl_employee;
+alter table tbl_employee drop column doj;
+SELECT * FROM tbl_employee;
+select * from tbl_employee;
+alter table tbl_employee add doj date;
+select * from tbl_employee;
+desc tbl_employee;
+alter table tbl_employee modify esalary number(7);
+desc tbl_employee;
+alter table tbl_employee rename column esalary to emp_salary;
+select * from tbl_employee;
+rename tbl_employee to tbl_emp;
+drop table tbl_emp;
+select * from tbl_employee;
+falshback table tbl_emp on before drop;
+
+
+OUTPUT:
+
+Table created.
+
+Table dropped.
+
+Table created.
+
+1 row(s) inserted.
+
+1 row(s) inserted.
+
+1 row(s) inserted.
+
+Result Set 194
+EID	ENAME	ESALARY
+1	Gokul	50000
+2	Janani	80000
+3	Krish Gokul	60000
+
+3 rows selected.
+
+no data found
+
+Result Set 195
+EID	ENAME	ESALARY
+1	Gokul	50000
+2	Janani	80000
+3	Krish Gokul	60000
+
+3 rows selected.
+
+Result Set 196
+EID	ENAME	ESALARY
+1	Gokul	50000
+2	Janani	80000
+3	Krish Gokul	60000
+
+3 rows selected.
+
+Result Set 197
+EID	ENAME	ESALARY
+1	Gokul	50000
+2	Janani	80000
+
+2 rows selected.
+
+Result Set 198
+EID	ENAME	ESALARY
+1	Gokul	50000
+2	Janani	80000
+3	Krish Gokul	60000
+3 rows selected.
+
+Result Set 199
+EID	ENAME	ESALARY
+1	Gokul	50000
+2	Janani	80000
+3	Krish Gokul	60000
+3 rows selected.
+
+Result Set 200
+EID	ENAME	ESALARY
+1	Gokul	50000
+
+no data found
+
+no data found
+
+Result Set 201
+EID	ENAME	ESALARY
+2	Janani	80000
+3	Krish Gokul	60000
+2 rows selected.
+
+Result Set 202
+EID	ENAME	ESALARY
+1	Gokul	50000
+2	Janani	80000
+3	Krish Gokul	60000
+3 rows selected.
+
+no data found
+
+Result Set 203
+EID	ENAME	ESALARY
+1	Gokul	50000
+3	Krish Gokul	60000
+2 rows selected.
+
+Result Set 204
+EID	ENAME	ESALARY
+2	Janani	80000
+
+1 row(s) inserted.
+
+Result Set 205
+EID	ENAME	ESALARY
+1	Gokul	50000
+2	Janani	80000
+3	Krish Gokul	60000
+7	 - 	15000
+4 rows selected.
+
+Result Set 206
+EID	ENAME	ESALARY
+7	 - 	15000
+
+Result Set 207
+EID	ENAME	ESALARY
+1	Gokul	50000
+2	Janani	80000
+3	Krish Gokul	60000
+3 rows selected.
+
+Result Set 208
+EID	ENAME	ESALARY
+1	Gokul	50000
+2	Janani	80000
+3	Krish Gokul	60000
+7	 - 	15000
+4 rows selected.
+
+Result Set 209
+EID	ENAME	ESALARY
+1	Gokul	50000
+2	Janani	80000
+3	Krish Gokul	60000
+7	 - 	15000
+4 rows selected.
+
+Result Set 210
+EID	ENAME	ESALARY
+7	 - 	15000
+3	Krish Gokul	60000
+2	Janani	80000
+1	Gokul	50000
+4 rows selected.
+
+Result Set 211
+EID	ENAME	ESALARY
+1	Gokul	50000
+2	Janani	80000
+3	Krish Gokul	60000
+7	 - 	15000
+4 rows selected.
+
+Result Set 212
+EID	ENAME	ESALARY
+1	Gokul	50000
+2	Janani	80000
+3	Krish Gokul	60000
+7	 - 	15000
+4 rows selected.
+
+Table altered.
+
+Result Set 213
+EID	ENAME	ESALARY	DOJ
+1	Gokul	50000	 - 
+2	Janani	80000	 - 
+3	Krish Gokul	60000	 - 
+7	 - 	15000	 - 
+4 rows selected.
+
+1 row(s) updated.
+
+Result Set 214
+EID	ENAME	ESALARY	DOJ
+1	Gokul	50000	10-MAY-04
+2	Janani	80000	 - 
+3	Krish Gokul	60000	 - 
+7	 - 	15000	 - 
+4 rows selected.
+
+1 row(s) updated.
+
+Result Set 215
+EID	ENAME	ESALARY	DOJ
+1	Gokul	50000	10-MAY-04
+2	Janani	80000	01-APR-00
+3	Krish Gokul	60000	 - 
+7	 - 	15000	 - 
+4 rows selected.
+
+Table altered.
+
+Result Set 216
+EID	ENAME	ESALARY
+1	Gokul	50000
+2	Janani	80000
+3	Krish Gokul	60000
+7	 - 	15000
+4 rows selected.
+
+Result Set 217
+EID	ENAME	ESALARY
+1	Gokul	50000
+2	Janani	80000
+3	Krish Gokul	60000
+7	 - 	15000
+4 rows selected.
+
+Table altered.
+
+Result Set 218
+EID	ENAME	ESALARY	DOJ
+1	Gokul	50000	 - 
+2	Janani	80000	 - 
+3	Krish Gokul	60000	 - 
+7	 - 	15000	 - 
+4 rows selected.
+
+TABLE TBL_EMPLOYEEResult Set 219
+Column	Null?	Type
+EID	 - 	NUMBER(5,0)
+ENAME	 - 	VARCHAR2(20)
+ESALARY	 - 	NUMBER(5,0)
+DOJ	 - 	DATE
+4 rows selected.
+
+Table altered.
+
+TABLE TBL_EMPLOYEEResult Set 220
+Column	Null?	Type
+EID	 - 	NUMBER(5,0)
+ENAME	 - 	VARCHAR2(20)
+ESALARY	 - 	NUMBER(7,0)
+DOJ	 - 	DATE
+4 rows selected.
+
+Table altered.
+
+Result Set 221
+EID	ENAME	EMP_SALARY	DOJ
+1	Gokul	50000	 - 
+2	Janani	80000	 - 
+3	Krish Gokul	60000	 - 
+7	 - 	15000	 - 
+4 rows selected.
+
